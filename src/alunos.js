@@ -18,21 +18,24 @@ const larissa = new Aluno("Larissa", 6)
 const laura = new Aluno("Laura", 1)
 const giovanna = new Aluno("Giovanna", 9)
 
-//Transformação em Array
+//Transformação em Array----------------------------------
 
 const listaAlunos = [];
 
 listaAlunos.push(julio, gian, fred, pedro, larissa, laura, giovanna);
 // console.log(listaAlunos);
 
+//Filtra alunos na média----------------
 const alunosNaMedia = listaAlunos.filter(function (item) {
     return item.nota >= 6;
 });
 
+//Filtra alunos fora da média---------------
 const alunosForaDaMedia = listaAlunos.filter(function (item) {
     return item.nota < 6;
 });
 
+//Função que retorna alunos que passaram com média igual ou maior que 6
 const retornaNaMedia = () => {
 
     for (let i = 0; i < alunosNaMedia.length; i++) {
@@ -41,6 +44,7 @@ const retornaNaMedia = () => {
     }
 }
 
+//Retorna alunos que não passaram
 const retornaForaDaMedia = () => {
 
     for (let i = 0; i < alunosForaDaMedia.length; i++) {
