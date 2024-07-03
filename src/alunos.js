@@ -38,19 +38,17 @@ const alunosForaDaMedia = listaAlunos.filter(function (item) {
 //Função que retorna alunos que passaram com média igual ou maior que 6
 const retornaNaMedia = () => {
 
-    for (let i = 0; i < alunosNaMedia.length; i++) {
-
-        console.log(`O aluno ${alunosNaMedia[i].nome} passou com média:${alunosNaMedia[i].nota} `)
-    }
+    alunosNaMedia.forEach(aluno => {
+        console.log(`O aluno ${aluno.nome} passou com média: ${aluno.nota}`);
+    });
 }
 
 //Retorna alunos que não passaram
 const retornaForaDaMedia = () => {
 
-    for (let i = 0; i < alunosForaDaMedia.length; i++) {
-
-        console.log(`O aluno ${alunosForaDaMedia[i].nome} ficou retido com média de:${alunosForaDaMedia[i].nota} `)
-    }
+    alunosForaDaMedia.forEach(aluno => {
+        console.log(`O aluno ${aluno.nome} não passou e ficou com a nota: ${aluno.nota}`)
+    })
 }
 
 
